@@ -8,36 +8,32 @@
 function somma(a,b){
     document.querySelector(".displayC").value = a + b;
     }
-
-
 function sottrazione(a,b){
     document.querySelector(".displayC").value = a - b;
 }
-//console.log(sottrazione(num1,num2));
 function moltiplicazione(a,b){
     document.querySelector(".displayC").value = a * b;
 }
-//console.log(moltiplicazione(num1,num2));
 function divisione(a,b){
     if(num2===0|| num1===0,num2===0){
         document.querySelector(".displayC").value = "Undefined";
     }else{
         document.querySelector(".displayC").value = a / b;
-    }
-   
-}
+    }}
 
-//console.log(divisione(num1,num2));
-// funzione operate 
+
+// funzione operattive
 
 function operate(a,op,b){
     if(op === "+"){
         somma(a,b);
-    }
-    
-}
+    }}
 function change(){
     cambio = false;
+}
+function Delate(){
+    num1 = "";
+    num2 = "";
 }
 
 // const display e button
@@ -47,6 +43,7 @@ const seven = document.querySelector(".pulsante7")
 const eight = document.querySelector(".pulsante8")
 const nine = document.querySelector(".pulsante9")
 const plus = document.querySelector(".pulsantex")
+const Canc = document.querySelector(".pulsanteCanc")
 const four = document.querySelector(".pulsante4")
 const five = document.querySelector(".pulsante5")
 const six = document.querySelector(".pulsante6")
@@ -67,8 +64,7 @@ let cambio = true
 //event pulsanti
 
 seven.addEventListener("click", ()=>{
-     
-    if(cambio===false){
+     if(cambio===false){
        
         num2 += "7"
         document.querySelector(".displayC").value += "7";
@@ -80,6 +76,7 @@ seven.addEventListener("click", ()=>{
         console.log("num1"+num1)
     }
 })
+
 eight.addEventListener("click", ()=>{
      if(cambio===false){
        
@@ -94,6 +91,7 @@ eight.addEventListener("click", ()=>{
     }
     
 })
+
 nine.addEventListener("click", ()=>{
      if(cambio===false){
        
@@ -107,11 +105,20 @@ nine.addEventListener("click", ()=>{
         console.log("num1"+num1)
     }
 })
+
 plus.addEventListener("click", ()=>{
    change();
    document.querySelector(".displayC").value
     += "x";
    operatore = "x";
+
+})
+Canc.addEventListener("click", ()=>{
+   Delate();
+   cambio = true;
+   document.querySelector(".displayC").value
+    = "";
+   
 
 })
 four.addEventListener("click", ()=>{
@@ -127,6 +134,7 @@ four.addEventListener("click", ()=>{
         console.log("num1"+num1)
     }
 })
+
 five.addEventListener("click", ()=>{
     if(cambio===false){
        
@@ -140,6 +148,7 @@ five.addEventListener("click", ()=>{
         console.log("num1"+num1)
     }
 })
+
 six.addEventListener("click", ()=>{
      if(cambio===false){
        
@@ -153,18 +162,21 @@ six.addEventListener("click", ()=>{
         console.log("num1"+num1)
     }
 })
+
 minus.addEventListener("click", ()=>{
     change();
    document.querySelector(".displayC").value
     += "-";
    operatore = "-";
 })
+
 division.addEventListener("click", ()=>{
     change();
    document.querySelector(".displayC").value
     += "/";
    operatore = "/";
 })
+
 one.addEventListener("click", ()=>{
      if(cambio===false){
        
@@ -178,6 +190,7 @@ one.addEventListener("click", ()=>{
         console.log("num1"+num1)
     }
 })
+
 two.addEventListener("click", ()=>{
      if(cambio===false){
        
@@ -191,6 +204,7 @@ two.addEventListener("click", ()=>{
         console.log("num1"+num1)
     }
 })
+
 three.addEventListener("click", ()=>{
      if(cambio===false){
        
@@ -204,12 +218,14 @@ three.addEventListener("click", ()=>{
         console.log("num1"+num1)
     }
 })
+
 add.addEventListener("click", ()=>{
    change();
    document.querySelector(".displayC").value
     += "+";
    operatore = "+";
 })
+
 equal.addEventListener("click", ()=>{
     num1 = parseFloat(num1)
     num2 = parseFloat(num2)
