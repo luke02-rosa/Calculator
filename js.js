@@ -59,7 +59,8 @@ const equal = document.querySelector(".pulsanteEqual")
 let num1 = "";
 let num2 = "";
 let operatore ;
-let cambio = true
+let cambio = true;
+let secondoNumero = false;
 
 //event pulsanti
 
@@ -67,8 +68,10 @@ seven.addEventListener("click", ()=>{
      if(cambio===false){
        
         num2 += "7"
+        secondoNumero = true;
         document.querySelector(".displayC").value += "7";
         console.log("num2"+num2)
+        console.log(secondoNumero)
     }
     else{
         num1 += "7";
@@ -81,6 +84,7 @@ eight.addEventListener("click", ()=>{
      if(cambio===false){
        
         num2 += "8"
+        secondoNumero = true;
         document.querySelector(".displayC").value += "8";
         console.log("num2"+num2)
     }
@@ -96,6 +100,7 @@ nine.addEventListener("click", ()=>{
      if(cambio===false){
        
         num2 += "9"
+        secondoNumero = true;
         document.querySelector(".displayC").value += "9";
         console.log("num2"+num2)
     }
@@ -107,7 +112,40 @@ nine.addEventListener("click", ()=>{
 })
 
 plus.addEventListener("click", ()=>{
-   change();
+   
+    change();
+    if(secondoNumero === true){
+    num1 = parseFloat(num1)
+    num2 = parseFloat(num2)
+    switch(operatore){
+        case "+":
+            somma(num1,num2);
+            num1 = num1 + num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+        
+        case "-":
+            sottrazione(num1,num2);
+            num1 = num1 - num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+
+        case "x":
+            moltiplicazione(num1,num2);
+            num1 = num1 * num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+        
+        case "/":
+            divisione(num1,num2);
+            num1 = num1 / num2;
+            num2 =""
+            secondoNumero = false;
+            break;}}
+   
    document.querySelector(".displayC").value
     += "x";
    operatore = "x";
@@ -125,6 +163,7 @@ four.addEventListener("click", ()=>{
      if(cambio===false){
        
         num2 += "4"
+        secondoNumero = true;
         document.querySelector(".displayC").value += "4";
         console.log("num2"+num2)
     }
@@ -139,6 +178,7 @@ five.addEventListener("click", ()=>{
     if(cambio===false){
        
         num2 += "5"
+        secondoNumero = true;
         document.querySelector(".displayC").value += "5";
         console.log("num2"+num2)
     }
@@ -153,6 +193,7 @@ six.addEventListener("click", ()=>{
      if(cambio===false){
        
         num2 += "6"
+        secondoNumero = true;
         document.querySelector(".displayC").value += "6";
         console.log("num2"+num2)
     }
@@ -165,6 +206,37 @@ six.addEventListener("click", ()=>{
 
 minus.addEventListener("click", ()=>{
     change();
+    if(secondoNumero === true){
+    num1 = parseFloat(num1)
+    num2 = parseFloat(num2)
+    switch(operatore){
+        case "+":
+            somma(num1,num2);
+            num1 = num1 + num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+        
+        case "-":
+            sottrazione(num1,num2);
+            num1 = num1 - num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+
+        case "x":
+            moltiplicazione(num1,num2);
+            num1 = num1 * num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+        
+        case "/":
+            divisione(num1,num2);
+            num1 = num1 / num2;
+            num2 =""
+            secondoNumero = false;
+            break;}}
    document.querySelector(".displayC").value
     += "-";
    operatore = "-";
@@ -172,6 +244,37 @@ minus.addEventListener("click", ()=>{
 
 division.addEventListener("click", ()=>{
     change();
+    if(secondoNumero === true){
+    num1 = parseFloat(num1)
+    num2 = parseFloat(num2)
+    switch(operatore){
+        case "+":
+            somma(num1,num2);
+            num1 = num1 + num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+        
+        case "-":
+            sottrazione(num1,num2);
+            num1 = num1 - num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+
+        case "x":
+            moltiplicazione(num1,num2);
+            num1 = num1 * num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+        
+        case "/":
+            divisione(num1,num2);
+            num1 = num1 / num2;
+            num2 =""
+            secondoNumero = false;
+            break;}}
    document.querySelector(".displayC").value
     += "/";
    operatore = "/";
@@ -181,6 +284,7 @@ one.addEventListener("click", ()=>{
      if(cambio===false){
        
         num2 += "1"
+        secondoNumero = true;
         document.querySelector(".displayC").value += "1";
         console.log("num2"+num2)
     }
@@ -195,6 +299,7 @@ two.addEventListener("click", ()=>{
      if(cambio===false){
        
         num2 += "2"
+        secondoNumero = true;
         document.querySelector(".displayC").value += "2";
         console.log("num2"+num2)
     }
@@ -209,6 +314,7 @@ three.addEventListener("click", ()=>{
      if(cambio===false){
        
         num2 += "3"
+        secondoNumero = true;
         document.querySelector(".displayC").value += "3";
         console.log("num2"+num2)
     }
@@ -221,6 +327,37 @@ three.addEventListener("click", ()=>{
 
 add.addEventListener("click", ()=>{
    change();
+   if(secondoNumero === true){
+    num1 = parseFloat(num1)
+    num2 = parseFloat(num2)
+    switch(operatore){
+        case "+":
+            somma(num1,num2);
+            num1 = num1 + num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+        
+        case "-":
+            sottrazione(num1,num2);
+            num1 = num1 - num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+
+        case "x":
+            moltiplicazione(num1,num2);
+            num1 = num1 * num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+        
+        case "/":
+            divisione(num1,num2);
+            num1 = num1 / num2;
+            num2 =""
+            secondoNumero = false;
+            break;}}
    document.querySelector(".displayC").value
     += "+";
    operatore = "+";
@@ -232,18 +369,30 @@ equal.addEventListener("click", ()=>{
     switch(operatore){
         case "+":
             somma(num1,num2);
+            num1 = num1 + num2;
+            num2 =""
+            secondoNumero = false;
             break;
         
         case "-":
             sottrazione(num1,num2);
+            num1 = num1 - num2;
+            num2 =""
+            secondoNumero = false;
             break;
 
         case "x":
             moltiplicazione(num1,num2);
+            num1 = num1 * num2;
+            num2 =""
+            secondoNumero = false;
             break;
         
         case "/":
             divisione(num1,num2);
+            num1 = num1 / num2;
+            num2 =""
+            secondoNumero = false;
             break;
 
     }
