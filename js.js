@@ -90,14 +90,22 @@ seven.addEventListener("click", ()=>{
 })
 
 eight.addEventListener("click", ()=>{
-     if(cambio===false){
+      if(risultatoPremuto === true){
+        risultatoPremuto = false;
+        num1 = "8";
+        document.querySelector(".displayC").value = "8"; 
+        console.log("num1"+num1)
+        console.log(risultatoPremuto)
+    }else if(cambio===false){
        
         num2 += "8"
         secondoNumero = true;
         document.querySelector(".displayC").value += "8";
         console.log("num2"+num2)
+        console.log(secondoNumero)
+        
     }
-    else{
+   else{
         num1 += "8";
         document.querySelector(".displayC").value += "8"; 
         console.log("num1"+num1)
@@ -106,14 +114,22 @@ eight.addEventListener("click", ()=>{
 })
 
 nine.addEventListener("click", ()=>{
-     if(cambio===false){
+      if(risultatoPremuto === true){
+        risultatoPremuto = false;
+        num1 = "9";
+        document.querySelector(".displayC").value = "9"; 
+        console.log("num1"+num1)
+        console.log(risultatoPremuto)
+    }else if(cambio===false){
        
         num2 += "9"
         secondoNumero = true;
         document.querySelector(".displayC").value += "9";
         console.log("num2"+num2)
+        console.log(secondoNumero)
+        
     }
-    else{
+   else{
         num1 += "9";
         document.querySelector(".displayC").value += "9"; 
         console.log("num1"+num1)
@@ -121,7 +137,7 @@ nine.addEventListener("click", ()=>{
 })
 
 plus.addEventListener("click", ()=>{
-   
+    risultatoPremuto = false;
     change();
     if(secondoNumero === true){
     num1 = parseFloat(num1)
@@ -169,14 +185,22 @@ Canc.addEventListener("click", ()=>{
 
 })
 four.addEventListener("click", ()=>{
-     if(cambio===false){
+     if(risultatoPremuto === true){
+        risultatoPremuto = false;
+        num1 = "4";
+        document.querySelector(".displayC").value = "4"; 
+        console.log("num1"+num1)
+        console.log(risultatoPremuto)
+    }else if(cambio===false){
        
         num2 += "4"
         secondoNumero = true;
         document.querySelector(".displayC").value += "4";
         console.log("num2"+num2)
+        console.log(secondoNumero)
+        
     }
-    else{
+   else{
         num1 += "4";
         document.querySelector(".displayC").value += "4"; 
         console.log("num1"+num1)
@@ -184,14 +208,22 @@ four.addEventListener("click", ()=>{
 })
 
 five.addEventListener("click", ()=>{
-    if(cambio===false){
+      if(risultatoPremuto === true){
+        risultatoPremuto = false;
+        num1 = "5";
+        document.querySelector(".displayC").value = "5"; 
+        console.log("num1"+num1)
+        console.log(risultatoPremuto)
+    }else if(cambio===false){
        
         num2 += "5"
         secondoNumero = true;
         document.querySelector(".displayC").value += "5";
         console.log("num2"+num2)
+        console.log(secondoNumero)
+        
     }
-    else{
+   else{
         num1 += "5";
         document.querySelector(".displayC").value += "5"; 
         console.log("num1"+num1)
@@ -199,14 +231,22 @@ five.addEventListener("click", ()=>{
 })
 
 six.addEventListener("click", ()=>{
-     if(cambio===false){
+     if(risultatoPremuto === true){
+        risultatoPremuto = false;
+        num1 = "6";
+        document.querySelector(".displayC").value = "6"; 
+        console.log("num1"+num1)
+        console.log(risultatoPremuto)
+    }else if(cambio===false){
        
         num2 += "6"
         secondoNumero = true;
         document.querySelector(".displayC").value += "6";
         console.log("num2"+num2)
+        console.log(secondoNumero)
+        
     }
-    else{
+   else{
         num1 += "6";
         document.querySelector(".displayC").value += "6"; 
         console.log("num1"+num1)
@@ -214,6 +254,7 @@ six.addEventListener("click", ()=>{
 })
 
 minus.addEventListener("click", ()=>{
+    risultatoPremuto = false;
     change();
     if(secondoNumero === true){
     num1 = parseFloat(num1)
@@ -252,6 +293,7 @@ minus.addEventListener("click", ()=>{
 })
 
 division.addEventListener("click", ()=>{
+    risultatoPremuto = false;
     change();
     if(secondoNumero === true){
     num1 = parseFloat(num1)
@@ -290,14 +332,22 @@ division.addEventListener("click", ()=>{
 })
 
 one.addEventListener("click", ()=>{
-     if(cambio===false){
+     if(risultatoPremuto === true){
+        risultatoPremuto = false;
+        num1 = "1";
+        document.querySelector(".displayC").value = "1"; 
+        console.log("num1"+num1)
+        console.log(risultatoPremuto)
+    }else if(cambio===false){
        
         num2 += "1"
         secondoNumero = true;
         document.querySelector(".displayC").value += "1";
         console.log("num2"+num2)
+        console.log(secondoNumero)
+        
     }
-    else{
+   else{
         num1 += "1";
         document.querySelector(".displayC").value += "1"; 
         console.log("num1"+num1)
@@ -305,14 +355,22 @@ one.addEventListener("click", ()=>{
 })
 
 two.addEventListener("click", ()=>{
-     if(cambio===false){
+    if(risultatoPremuto === true){
+        risultatoPremuto = false;
+        num1 = "2";
+        document.querySelector(".displayC").value = "2"; 
+        console.log("num1"+num1)
+        console.log(risultatoPremuto)
+    }else if(cambio===false){
        
         num2 += "2"
         secondoNumero = true;
         document.querySelector(".displayC").value += "2";
         console.log("num2"+num2)
+        console.log(secondoNumero)
+        
     }
-    else{
+   else{
         num1 += "2";
         document.querySelector(".displayC").value += "2"; 
         console.log("num1"+num1)
@@ -320,14 +378,22 @@ two.addEventListener("click", ()=>{
 })
 
 three.addEventListener("click", ()=>{
-     if(cambio===false){
+     if(risultatoPremuto === true){
+        risultatoPremuto = false;
+        num1 = "3";
+        document.querySelector(".displayC").value = "3"; 
+        console.log("num1"+num1)
+        console.log(risultatoPremuto)
+    }else if(cambio===false){
        
         num2 += "3"
         secondoNumero = true;
         document.querySelector(".displayC").value += "3";
         console.log("num2"+num2)
+        console.log(secondoNumero)
+        
     }
-    else{
+   else{
         num1 += "3";
         document.querySelector(".displayC").value += "3"; 
         console.log("num1"+num1)
@@ -335,6 +401,7 @@ three.addEventListener("click", ()=>{
 })
 
 add.addEventListener("click", ()=>{
+    risultatoPremuto = false;
    change();
    if(secondoNumero === true){
     num1 = parseFloat(num1)
@@ -390,6 +457,7 @@ equal.addEventListener("click", ()=>{
             num1 = num1 - num2;
             num2 =""
             secondoNumero = false;
+            //risultatoPremuto = true;
             break;
 
         case "x":
@@ -397,6 +465,7 @@ equal.addEventListener("click", ()=>{
             num1 = num1 * num2;
             num2 =""
             secondoNumero = false;
+            //risultatoPremuto = true;
             break;
         
         case "/":
@@ -404,6 +473,7 @@ equal.addEventListener("click", ()=>{
             num1 = num1 / num2;
             num2 =""
             secondoNumero = false;
+            //risultatoPremuto = true;
             break;
 
     }
