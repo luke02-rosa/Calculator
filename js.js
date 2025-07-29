@@ -61,19 +61,28 @@ let num2 = "";
 let operatore ;
 let cambio = true;
 let secondoNumero = false;
+let risultatoPremuto = false;
 
 //event pulsanti
 
 seven.addEventListener("click", ()=>{
-     if(cambio===false){
+     
+      if(risultatoPremuto === true){
+        risultatoPremuto = false;
+        num1 = "7";
+        document.querySelector(".displayC").value = "7"; 
+        console.log("num1"+num1)
+        console.log(risultatoPremuto)
+    }else if(cambio===false){
        
         num2 += "7"
         secondoNumero = true;
         document.querySelector(".displayC").value += "7";
         console.log("num2"+num2)
         console.log(secondoNumero)
+        
     }
-    else{
+   else{
         num1 += "7";
         document.querySelector(".displayC").value += "7"; 
         console.log("num1"+num1)
@@ -366,12 +375,14 @@ add.addEventListener("click", ()=>{
 equal.addEventListener("click", ()=>{
     num1 = parseFloat(num1)
     num2 = parseFloat(num2)
+    
     switch(operatore){
         case "+":
             somma(num1,num2);
             num1 = num1 + num2;
             num2 =""
             secondoNumero = false;
+            risultatoPremuto = true;
             break;
         
         case "-":
