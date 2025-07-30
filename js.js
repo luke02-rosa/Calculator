@@ -20,6 +20,9 @@ function divisione(a,b){
     }else{
         document.querySelector(".displayC").value = a / b;
     }}
+ function percentuale(a){
+    document.querySelector(".displayC").value = a / 100;
+ }   
 
 
 // funzione operattive
@@ -54,6 +57,8 @@ const two = document.querySelector(".pulsante2")
 const three = document.querySelector(".pulsante3")
 const add = document.querySelector(".pulsanteAdd")
 const equal = document.querySelector(".pulsanteEqual")
+const zero = document.querySelector(".pulsante0")
+const percent = document.querySelector(".pulsantePercent")
 
 //variabili
 let num1 = "";
@@ -169,7 +174,14 @@ plus.addEventListener("click", ()=>{
             num1 = num1 / num2;
             num2 =""
             secondoNumero = false;
-            break;}}
+            break;
+        case "%":
+            percentuale(num1);
+            num1 = num1 / 100;
+            num2 =""
+            secondoNumero = false;
+            break;
+        }}
    
    document.querySelector(".displayC").value
     += "x";
@@ -286,7 +298,14 @@ minus.addEventListener("click", ()=>{
             num1 = num1 / num2;
             num2 =""
             secondoNumero = false;
-            break;}}
+            break;
+        case "%":
+            percentuale(num1);
+            num1 = num1 / 100;
+            num2 =""
+            secondoNumero = false;
+            break;
+        }}
    document.querySelector(".displayC").value
     += "-";
    operatore = "-";
@@ -325,7 +344,14 @@ division.addEventListener("click", ()=>{
             num1 = num1 / num2;
             num2 =""
             secondoNumero = false;
-            break;}}
+            break;
+        case "%":
+            percentuale(num1);
+            num1 = num1 / 100;
+            num2 =""
+            secondoNumero = false;
+            break;
+        }}
    document.querySelector(".displayC").value
     += "/";
    operatore = "/";
@@ -399,6 +425,28 @@ three.addEventListener("click", ()=>{
         console.log("num1"+num1)
     }
 })
+zero.addEventListener("click", ()=>{
+     if(risultatoPremuto === true){
+        risultatoPremuto = false;
+        num1 = "0";
+        document.querySelector(".displayC").value = "0"; 
+        console.log("num1"+num1)
+        console.log(risultatoPremuto)
+    }else if(cambio===false){
+       
+        num2 += "0"
+        secondoNumero = true;
+        document.querySelector(".displayC").value += "0";
+        console.log("num2"+num2)
+        console.log(secondoNumero)
+        
+    }
+   else{
+        num1 += "0";
+        document.querySelector(".displayC").value += "0"; 
+        console.log("num1"+num1)
+    }
+})
 
 add.addEventListener("click", ()=>{
     risultatoPremuto = false;
@@ -433,10 +481,62 @@ add.addEventListener("click", ()=>{
             num1 = num1 / num2;
             num2 =""
             secondoNumero = false;
-            break;}}
+            break;
+        case "%":
+            percentuale(num1);
+            num1 = num1 / 100;
+            num2 =""
+            secondoNumero = false;
+            break;
+        }}
    document.querySelector(".displayC").value
     += "+";
    operatore = "+";
+})
+percent.addEventListener("click", ()=>{
+    risultatoPremuto = false;
+   change();
+   if(secondoNumero === true){
+    num1 = parseFloat(num1)
+    num2 = parseFloat(num2)
+    switch(operatore){
+        case "+":
+            somma(num1,num2);
+            num1 = num1 + num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+        
+        case "-":
+            sottrazione(num1,num2);
+            num1 = num1 - num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+
+        case "x":
+            moltiplicazione(num1,num2);
+            num1 = num1 * num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+        
+        case "/":
+            divisione(num1,num2);
+            num1 = num1 / num2;
+            num2 =""
+            secondoNumero = false;
+            break;
+        case "%":
+            percentuale(num1);
+            num1 = num1 / 100;
+            num2 =""
+            secondoNumero = false;
+            break;
+        }}
+   document.querySelector(".displayC").value
+    += "%";
+   operatore = "%";
 })
 
 equal.addEventListener("click", ()=>{
@@ -457,7 +557,7 @@ equal.addEventListener("click", ()=>{
             num1 = num1 - num2;
             num2 =""
             secondoNumero = false;
-            //risultatoPremuto = true;
+            risultatoPremuto = true;
             break;
 
         case "x":
@@ -465,7 +565,7 @@ equal.addEventListener("click", ()=>{
             num1 = num1 * num2;
             num2 =""
             secondoNumero = false;
-            //risultatoPremuto = true;
+            risultatoPremuto = true;
             break;
         
         case "/":
@@ -473,7 +573,14 @@ equal.addEventListener("click", ()=>{
             num1 = num1 / num2;
             num2 =""
             secondoNumero = false;
-            //risultatoPremuto = true;
+            risultatoPremuto = true;
+            break;
+        case "%":
+            percentuale(num1);
+            num1 = num1 / 100;
+            num2 =""
+            secondoNumero = false;
+            risultatoPremuto = true;
             break;
 
     }
