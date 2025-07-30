@@ -6,22 +6,27 @@
 //somma,sottrazione,moltiplicazione e divisione (funzioni)
 
 function somma(a,b){
-    document.querySelector(".displayC").value = a + b;
+    risultato = a + b;
+    document.querySelector(".displayC").value = parseFloat(risultato.toFixed(3));
     }
 function sottrazione(a,b){
-    document.querySelector(".displayC").value = a - b;
+     risultato = a - b;
+    document.querySelector(".displayC").value = parseFloat(risultato.toFixed(3));
 }
 function moltiplicazione(a,b){
-    document.querySelector(".displayC").value = a * b;
+     risultato = a * b;
+    document.querySelector(".displayC").value = parseFloat(risultato.toFixed(3));
 }
 function divisione(a,b){
+     risultato = a / b;
     if(num2===0|| num1===0,num2===0){
         document.querySelector(".displayC").value = "Undefined";
     }else{
-        document.querySelector(".displayC").value = a / b;
+        document.querySelector(".displayC").value = parseFloat(risultato.toFixed(3));
     }}
  function percentuale(a){
-    document.querySelector(".displayC").value = a / 100;
+     risultato = a / 100;
+    document.querySelector(".displayC").value = parseFloat(risultato.toFixed(3));
  }   
 
 
@@ -38,6 +43,15 @@ function Delate(){
     num1 = "";
     num2 = "";
 }
+function Cancel(){
+   if(cambio===false){
+    num2 = num2.slice(0,-1);
+   }else{
+    num1 = num1.slice(0,-1);
+   }
+    displayCvalue = displayC.value.slice(0,-1);
+    document.querySelector(".displayC").value = displayCvalue;
+}
 
 // const display e button
 
@@ -46,7 +60,7 @@ const seven = document.querySelector(".pulsante7")
 const eight = document.querySelector(".pulsante8")
 const nine = document.querySelector(".pulsante9")
 const plus = document.querySelector(".pulsantex")
-const Canc = document.querySelector(".pulsanteCanc")
+const Delete = document.querySelector(".pulsanteDelete")
 const four = document.querySelector(".pulsante4")
 const five = document.querySelector(".pulsante5")
 const six = document.querySelector(".pulsante6")
@@ -59,6 +73,9 @@ const add = document.querySelector(".pulsanteAdd")
 const equal = document.querySelector(".pulsanteEqual")
 const zero = document.querySelector(".pulsante0")
 const percent = document.querySelector(".pulsantePercent")
+const punto = document.querySelector(".pulsantePunto")
+const Canc = document.querySelector(".pulsanteCanc")
+
 
 //variabili
 let num1 = "";
@@ -69,7 +86,30 @@ let secondoNumero = false;
 let risultatoPremuto = false;
 
 //event pulsanti
-
+punto.addEventListener("click", ()=>{
+     
+      if(risultatoPremuto === true){
+        risultatoPremuto = false;
+        cambio = true;
+        num1 = "0.";
+        document.querySelector(".displayC").value = "0."; 
+        console.log("num1"+num1)
+        console.log(risultatoPremuto)
+    }else if(cambio===false){
+       
+        num2 += "."
+        secondoNumero = true;
+        document.querySelector(".displayC").value += ".";
+        console.log("num2"+num2)
+        console.log(secondoNumero)
+        
+    }
+   else{
+        num1 += ".";
+        document.querySelector(".displayC").value += "."; 
+        console.log("num1"+num1)
+    }
+})
 seven.addEventListener("click", ()=>{
      
       if(risultatoPremuto === true){
@@ -188,7 +228,7 @@ plus.addEventListener("click", ()=>{
    operatore = "x";
 
 })
-Canc.addEventListener("click", ()=>{
+Delete.addEventListener("click", ()=>{
    Delate();
    cambio = true;
    document.querySelector(".displayC").value
@@ -538,11 +578,13 @@ percent.addEventListener("click", ()=>{
     += "%";
    operatore = "%";
 })
+Canc.addEventListener("click", ()=>{
+   Cancel();
+})
 
 equal.addEventListener("click", ()=>{
     num1 = parseFloat(num1)
     num2 = parseFloat(num2)
-    
     switch(operatore){
         case "+":
             somma(num1,num2);
