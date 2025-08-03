@@ -23,7 +23,7 @@ body{
     flex-direction: column;
     border: 5px solid #2D2D2A;
     border-radius: 10px;
-    width: 100vw;   /* tutta la larghezza viewport */
+    width: 100vh;   /* tutta la larghezza viewport */
     height: 100vh;  /* tutta l’altezza viewport */
     max-width: 400px; /* opzionale, per non superare una certa larghezza */
     max-height: 844px; /* opzionale, altezza iPhone 12 viewport */
@@ -44,7 +44,7 @@ body{
     
 }
 .displayC{
-    width: 400px;
+    width: 270px;
     height: 140px;
     font-size: 100px;
     background-color: #2D2D2A;
@@ -59,8 +59,8 @@ body{
 }
 
 #contenitoreP button {
-   width: 90px;
-   height: 90px;
+   width: 60px;
+   height: 60px;
    border-radius: 20px;
    margin:2px ;
    color: white;
@@ -69,7 +69,7 @@ body{
 font-size: larger;
   }
 #contenitoreP .pulsanteDelete{
-    width: 186px;
+    width: 125px;
     background-color: #3F5E5A;
     font-family:'Roboto Mono', monospace;
 }
