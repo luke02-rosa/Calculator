@@ -1,4 +1,4 @@
-const cacheName = 'calcolatrice-cache-v7'; // Cambia numero ad ogni modifica importante
+const cacheName = 'calcolatrice-cache-v8'; // Cambia numero ad ogni modifica importante
 
 const filesToCache = [
   './',
