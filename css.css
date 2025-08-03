@@ -1,26 +1,119 @@
+html, body{
+    height: 100%;
+}
 body{
     background-color: yellowgreen;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
-h2{
-    font-size: 60px;
-}
+
 #scheletro{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 5px solid black;
+    border: 5px solid #2D2D2A;
     border-radius: 10px;
-    width: 300px;
-    height: 400px;
+    width: 240px;
+    height: 430px;
+    background-color: #2D2D2A;
     
 }
 #scheletroD{
-    border: 2px solid black;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
     
+}
+.displayC{
+    width: 230px;
+    height: 140px;
+    font-size: 60px;
+    background-color: #2D2D2A;
+    text-align: right;
+    box-sizing: border-box;
+    padding-top: 60px;
+    border: none;
+    color: white;
+    font-family:'Roboto Mono', monospace;
+}
+
+#contenitoreP button {
+   width: 50px;
+   height: 50px;
+   border-radius: 20px;
+   margin:2px ;
+   color: white;
+   border: none;
+    font-weight: lighter;
+    font-size: larger;
+  }
+#contenitoreP .pulsanteDelete{
+    width: 105px;
+    background-color: #3F5E5A;
+    font-family:'Roboto Mono', monospace;
+}
+#contenitoreP .pulsantex{
+    background-color:#20FC8F ;
+    color: #2d2d2a;
+   
+    
+}
+#contenitoreP .pulsante-{
+    background-color:#20FC8F ;
+    color: #2d2d2a;
+}
+#contenitoreP .pulsanteAdd{
+    background-color:#20FC8F ;
+    color: #2d2d2a;
+}
+#contenitoreP .pulsanteD{
+    background-color:#20FC8F ;
+    color: #2d2d2a;
+}
+#contenitoreP .pulsanteEqual{
+    background-color:#20FC8F ;
+    color: #2d2d2a;
+}
+#contenitoreP .pulsantePercent{
+    margin-left: 5px;
+    background-color: #3F5E5A;
+
+}
+#contenitoreP .pulsanteCanc{
+    background-color:#3F5E5A;
+}
+#contenitoreP .pulsante7{
+    background-color:#38423B;
+}
+#contenitoreP .pulsante8{
+    background-color:#38423B;
+}
+#contenitoreP .pulsante9{
+    background-color:#38423B;
+}
+#contenitoreP .pulsante4{
+    background-color:#38423B;
+}
+#contenitoreP .pulsante5{
+    background-color:#38423B;
+}
+#contenitoreP .pulsante6{
+    background-color:#38423B;
+}
+#contenitoreP .pulsante1{
+    background-color:#38423B;
+}
+#contenitoreP .pulsante2{
+    background-color:#38423B;
+}
+#contenitoreP .pulsante3{
+    background-color:#38423B;
+}
+#contenitoreP .pulsante0{
+    background-color:#38423B;
+}
+#contenitoreP .pulsantePunto{
+    background-color:#38423B;
 }
