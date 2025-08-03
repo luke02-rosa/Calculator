@@ -1,4 +1,4 @@
-const cacheName = 'calcolatrice-cache-v4'; // Cambia versione ogni volta che aggiorni i file
+const cacheName = 'calcolatrice-cache-v5'; // Cambia versione ogni volta che aggiorni i file
 
 const filesToCache = [
   './',
