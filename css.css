@@ -1,3 +1,5 @@
+
+
 html, body{
     height: 100%;
     margin: 0;
@@ -5,23 +7,35 @@ html, body{
   
 }
 body{
-    background-color: yellowgreen;
+    background-color: #2D2D2A;
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
 
+
 #scheletro{
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border: 5px solid #2D2D2A;
     border-radius: 10px;
-    width: 240px;
-    height: 430px;
+    width: 100vw;   /* tutta la larghezza viewport */
+    height: 100vh;  /* tutta l’altezza viewport */
+    max-width: 400px; /* opzionale, per non superare una certa larghezza */
+    max-height: 844px; /* opzionale, altezza iPhone 12 viewport */
     background-color: #2D2D2A;
+    box-sizing: border-box; /* includi bordi nella dimensione */
+    
+    
+
+
+   
+
+
     
 }
 #scheletroD{
@@ -30,30 +44,32 @@ body{
     
 }
 .displayC{
-    width: 230px;
+    width: 400px;
     height: 140px;
-    font-size: 60px;
+    font-size: 100px;
     background-color: #2D2D2A;
     text-align: right;
     box-sizing: border-box;
     padding-top: 60px;
+    margin-top: 100px;
+    margin-bottom:100px;
     border: none;
     color: white;
     font-family:'Roboto Mono', monospace;
 }
 
 #contenitoreP button {
-   width: 50px;
-   height: 50px;
+   width: 90px;
+   height: 90px;
    border-radius: 20px;
    margin:2px ;
    color: white;
    border: none;
-    font-weight: lighter;
-    font-size: larger;
+   font-weight: lighter;
+font-size: larger;
   }
 #contenitoreP .pulsanteDelete{
-    width: 105px;
+    width: 186px;
     background-color: #3F5E5A;
     font-family:'Roboto Mono', monospace;
 }
@@ -120,69 +136,4 @@ body{
 #contenitoreP .pulsantePunto{
     background-color:#38423B;
 }
- /* hover function */
-
-/* #contenitoreP .pulsanteDelete:hover{
-    background-color:#5A8781;
-}
- #contenitoreP .pulsantePercent:hover{
-    background-color:#5A8781;
-}
- #contenitoreP .pulsanteCanc:hover{
-    background-color:#5A8781;
-}
-#contenitoreP .pulsantex:hover{
-    background-color:#00E070;
-    
-}
-#contenitoreP .pulsante-:hover{
-    background-color:#00E070 ;
-    
-}
-#contenitoreP .pulsanteAdd:hover{
-    background-color:#00E070 ;
-    
-}
-#contenitoreP .pulsanteD:hover{
-    background-color:#00E070 ;
-    
-}
-#contenitoreP .pulsanteEqual:hover{
-    background-color:#00E070 ;
-    
-}*/
-/*numeri*/
-/*#contenitoreP .pulsante7:hover{
-    background-color:#4B584F;
-}
-#contenitoreP .pulsante8:hover{
-    background-color:#4B584F;
-}
-#contenitoreP .pulsante9:hover{
-    background-color:#4B584F;
-}
-#contenitoreP .pulsante4:hover{
-    background-color:#4B584F;
-}
-#contenitoreP .pulsante5:hover{
-    background-color:#4B584F;
-}
-#contenitoreP .pulsante6:hover{
-    background-color:#4B584F;
-}
-#contenitoreP .pulsante1:hover{
-    background-color:#4B584F;
-}
-#contenitoreP .pulsante2:hover{
-    background-color:#4B584F;
-}
-#contenitoreP .pulsante3:hover{
-    background-color:#4B584F;
-}
-#contenitoreP .pulsante0:hover{
-    background-color:#4B584F;
-}
-#contenitoreP .pulsantePunto:hover{
-    background-color:#4B584F;
-}*/
-   
+ 
