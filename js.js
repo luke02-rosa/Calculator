@@ -87,7 +87,10 @@ let risultatoPremuto = false;
 
 //event pulsanti
 punto.addEventListener("click", ()=>{
-     
+      punto.style.background = "#4B584F";
+      setTimeout(() =>{
+        punto.style.background = "#38423B";
+      },200);
       if(risultatoPremuto === true){
         risultatoPremuto = false;
         cambio = true;
@@ -111,7 +114,10 @@ punto.addEventListener("click", ()=>{
     }
 })
 seven.addEventListener("click", ()=>{
-     
+       seven.style.background = "#4B584F";
+      setTimeout(() =>{
+        seven.style.background = "#38423B";
+      },200);
       if(risultatoPremuto === true){
         risultatoPremuto = false;
         num1 = "7";
@@ -135,6 +141,10 @@ seven.addEventListener("click", ()=>{
 })
 
 eight.addEventListener("click", ()=>{
+     eight.style.background = "#4B584F";
+      setTimeout(() =>{
+        eight.style.background = "#38423B";
+      },200);
       if(risultatoPremuto === true){
         risultatoPremuto = false;
         num1 = "8";
@@ -159,6 +169,10 @@ eight.addEventListener("click", ()=>{
 })
 
 nine.addEventListener("click", ()=>{
+     nine.style.background = "#4B584F";
+      setTimeout(() =>{
+        nine.style.background = "#38423B";
+      },200);
       if(risultatoPremuto === true){
         risultatoPremuto = false;
         num1 = "9";
@@ -182,6 +196,10 @@ nine.addEventListener("click", ()=>{
 })
 
 plus.addEventListener("click", ()=>{
+    plus.style.background = "#00E070 ";
+      setTimeout(() =>{
+        plus.style.background = "#20FC8F";
+      },200);
     risultatoPremuto = false;
     change();
     if(secondoNumero === true){
@@ -229,6 +247,10 @@ plus.addEventListener("click", ()=>{
 
 })
 Delete.addEventListener("click", ()=>{
+     Delete.style.background = "#5A8781";
+      setTimeout(() =>{
+        Delete.style.background = "#3F5E5A";
+      },200);
    Delate();
    cambio = true;
    document.querySelector(".displayC").value
@@ -237,6 +259,10 @@ Delete.addEventListener("click", ()=>{
 
 })
 four.addEventListener("click", ()=>{
+     four.style.background = "#4B584F";
+      setTimeout(() =>{
+        four.style.background = "#38423B";
+      },200);
      if(risultatoPremuto === true){
         risultatoPremuto = false;
         num1 = "4";
@@ -260,6 +286,10 @@ four.addEventListener("click", ()=>{
 })
 
 five.addEventListener("click", ()=>{
+     five.style.background = "#4B584F";
+      setTimeout(() =>{
+        five.style.background = "#38423B";
+      },200);
       if(risultatoPremuto === true){
         risultatoPremuto = false;
         num1 = "5";
@@ -283,6 +313,10 @@ five.addEventListener("click", ()=>{
 })
 
 six.addEventListener("click", ()=>{
+     six.style.background = "#4B584F";
+      setTimeout(() =>{
+        six.style.background = "#38423B";
+      },200);
      if(risultatoPremuto === true){
         risultatoPremuto = false;
         num1 = "6";
@@ -306,6 +340,10 @@ six.addEventListener("click", ()=>{
 })
 
 minus.addEventListener("click", ()=>{
+     minus.style.background = "#00E070 ";
+      setTimeout(() =>{
+        minus.style.background = "#20FC8F";
+      },200);
     risultatoPremuto = false;
     change();
     if(secondoNumero === true){
@@ -352,6 +390,10 @@ minus.addEventListener("click", ()=>{
 })
 
 division.addEventListener("click", ()=>{
+     division.style.background = "#00E070 ";
+      setTimeout(() =>{
+       division.style.background = "#20FC8F";
+      },200);
     risultatoPremuto = false;
     change();
     if(secondoNumero === true){
@@ -398,6 +440,10 @@ division.addEventListener("click", ()=>{
 })
 
 one.addEventListener("click", ()=>{
+     one.style.background = "#4B584F";
+      setTimeout(() =>{
+        one.style.background = "#38423B";
+      },200);
      if(risultatoPremuto === true){
         risultatoPremuto = false;
         num1 = "1";
@@ -421,6 +467,10 @@ one.addEventListener("click", ()=>{
 })
 
 two.addEventListener("click", ()=>{
+     two.style.background = "#4B584F";
+      setTimeout(() =>{
+        two.style.background = "#38423B";
+      },200);
     if(risultatoPremuto === true){
         risultatoPremuto = false;
         num1 = "2";
@@ -444,6 +494,10 @@ two.addEventListener("click", ()=>{
 })
 
 three.addEventListener("click", ()=>{
+     three.style.background = "#4B584F";
+      setTimeout(() =>{
+        three.style.background = "#38423B";
+      },200);
      if(risultatoPremuto === true){
         risultatoPremuto = false;
         num1 = "3";
@@ -466,6 +520,10 @@ three.addEventListener("click", ()=>{
     }
 })
 zero.addEventListener("click", ()=>{
+     zero.style.background = "#4B584F";
+      setTimeout(() =>{
+        zero.style.background = "#38423B";
+      },200);
      if(risultatoPremuto === true){
         risultatoPremuto = false;
         num1 = "0";
@@ -489,6 +547,10 @@ zero.addEventListener("click", ()=>{
 })
 
 add.addEventListener("click", ()=>{
+     add.style.background = "#00E070 ";
+      setTimeout(() =>{
+        add.style.background = "#20FC8F";
+      },200);
     risultatoPremuto = false;
    change();
    if(secondoNumero === true){
@@ -534,6 +596,10 @@ add.addEventListener("click", ()=>{
    operatore = "+";
 })
 percent.addEventListener("click", ()=>{
+    percent.style.background = "#5A8781";
+      setTimeout(() =>{
+       percent.style.background = "#3F5E5A";
+      },200);
     risultatoPremuto = false;
    change();
    if(secondoNumero === true){
@@ -579,10 +645,18 @@ percent.addEventListener("click", ()=>{
    operatore = "%";
 })
 Canc.addEventListener("click", ()=>{
+   Canc.style.background = "#5A8781";
+      setTimeout(() =>{
+        Canc.style.background = "#3F5E5A";
+      },200);
    Cancel();
 })
 
 equal.addEventListener("click", ()=>{
+     equal.style.background = "#00E070 ";
+      setTimeout(() =>{
+        equal.style.background = "#20FC8F";
+      },200);
     num1 = parseFloat(num1)
     num2 = parseFloat(num2)
     switch(operatore){
